@@ -7,11 +7,11 @@
 	<key>CFBundleDisplayName</key>
 	<string>ExtendedReader</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.renalias.extendedreader</string>
+	<string>net.renalias.safari.extendedreader</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Chrome</key>
@@ -52,5 +52,7 @@
 			<string>Some</string>
 		</dict>
 	</dict>
+	<key>Website</key>
+	<string>http://github.com/phunkphorce/misc/tree/master/SafariExtensions/</string>
 </dict>
 </plist>
