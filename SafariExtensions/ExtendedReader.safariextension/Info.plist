@@ -52,6 +52,8 @@
 			<string>Some</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://github.com/phunkphorce/misc/raw/master/SafariExtensions/ExtendedReader.safariextension/Versions.plist</string>
 	<key>Website</key>
 	<string>http://github.com/phunkphorce/misc/tree/master/SafariExtensions/</string>
 </dict>
