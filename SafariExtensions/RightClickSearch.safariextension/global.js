@@ -1,30 +1,39 @@
 safari.application.addEventListener("contextmenu", handleContextMenu, false);
 safari.application.addEventListener("command", handleContextMenuAction, false);
-safari.application.addEventListener("message", handleMessage, false);
 
 sites = {
 	'google': {
-		'desc': 'Search in Google',
-		'uri': 'http://www.google.com/search?q=',
+		'desc': 'Google',
+		'uri': 'http://www.google.com/search?q='
 	},
 	'googleimages': {
-		'desc': 'Search in Google Image Search',
-		'uri': 'http://www.google.com/images?q=',
+		'desc': 'Google Image Search',
+		'uri': 'http://www.google.com/images?q='
 	},
 	'wikipedia': {
-		'desc': 'Search in Wikipedia',
-		'uri': 'http://en.wikipedia.org/wiki/',		
+		'desc': 'Wikipedia',
+		'uri': 'http://en.wikipedia.org/wiki/'		
 	},
 	'imdb': {
-		'desc': 'Search in IMDB',
-		'uri': 'http://www.imdb.com/find?s=all&q=',
+		'desc': 'IMDB',
+		'uri': 'http://www.imdb.com/find?s=all&q='
+	},
+	'bing': {
+		'desc': 'Bing',
+		'uri': 'http://www.bing.com/search?q='
+	},
+	'amazon': {
+		'desc': 'Amazon',
+		'uri': 'http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords='
 	}
 };
  
 function handleContextMenu(event) {	
 	if(event.userInfo.length > 0) {
 		for(i in sites) {
-			event.contextMenu.appendContextMenuItem(i, sites[i].desc, "doSearch");	
+			if(safari.extension.settings[i] == true) {
+				event.contextMenu.appendContextMenuItem(i, "Search in " + sites[i].desc, "doSearch");	
+			}
 		}	
 	}
 }
