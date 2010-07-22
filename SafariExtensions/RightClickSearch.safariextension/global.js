@@ -5,7 +5,7 @@ safari.application.addEventListener("message", handleMessage, false);
 sites = {
 	'google': {
 		'desc': 'Search in Google',
-		'uri': 'http://www.google.com/?q=',
+		'uri': 'http://www.google.com/search?q=',
 	},
 	'googleimages': {
 		'desc': 'Search in Google Image Search',
@@ -30,21 +30,15 @@ function handleContextMenu(event) {
 }
 
 function handleContextMenuAction(event) {
-	//alert("searching: " + sites[event.target.identifier].desc);
 	if(event.command == "doSearch") {
-		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("doTextSearch", sites[event.target.identifier]);
+		searchText(event.userInfo, sites[event.target.identifier].uri);
 	}
 	else {
-		alert(event.command);
+		console("Unrecognized command:" + event.command);
 	}	
 }
 
-function handleMessage(event) {
-	if(event.name == "searchSelectedText" ) {
-		// extract the parameters and create the url for the search site
-		text = encodeURIComponent(event.message.selection);
-		url = event.message.message.uri + text;
-		// open a new tab and perform the search		
-		safari.application.activeBrowserWindow.openTab().url = url;
-	}
+function searchText(text, uri) {
+	url = uri + encodeURIComponent(text);
+	safari.application.activeBrowserWindow.openTab().url = url;	
 }
