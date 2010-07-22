@@ -12,9 +12,9 @@
        <key>CFBundleVersion</key>
 	   <string>1</string>
        <key>CFBundleShortVersionString</key>
-       <string>1.2</string>
+       <string>1.0</string>
        <key>URL</key>
-       <string>http://github.com/phunkphorce/misc/raw/master/SafariExtensions/ExtendedReader.safariextension/ExtendedReader.safariextz</string>
+       <string>http://github.com/phunkphorce/misc/raw/master/SafariExtensions/RightClickSearch.safariextension/RightClickSearch.safariextz</string>
      </dict>
    </array>
 </dict>

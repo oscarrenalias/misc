@@ -7,7 +7,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>RightClickSearch</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.renalias.rightclicksearch</string>
+	<string>net.renalias.safari.rightclicksearch</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -43,5 +43,9 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://github.com/phunkphorce/misc/blob/master/SafariExtensions/RightClickSearch.safariextension/Versions.plist</string>
+	<key>Website</key>
+	<string>http://github.com/phunkphorce/misc/tree/master/SafariExtensions/</string>
 </dict>
 </plist>
