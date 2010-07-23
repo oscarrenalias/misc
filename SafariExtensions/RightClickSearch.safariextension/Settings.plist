@@ -3,6 +3,12 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>Title</key>
+		<string>Available search engines</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>	
+	<dict>
 		<key>DefaultValue</key>
 		<true/>
 		<key>Key</key>
@@ -59,6 +65,20 @@
 		<string>amazon</string>
 		<key>Title</key>
 		<string>Show Amazon</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	<dict>
+		<key>Type</key>
+		<string>Separator</string>
+	</dict>	
+	<dict>
+		<key>DefaultValue</key>
+		<true/>
+		<key>Key</key>
+		<string>usehttps</string>
+		<key>Title</key>
+		<string>Use HTTPS where available</string>
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
